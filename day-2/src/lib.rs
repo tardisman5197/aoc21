@@ -30,14 +30,13 @@ pub fn part_2(filepath: &str) -> i32 {
     horizontal * depth
 }
 
-
 #[cfg(test)]
 mod tests {
     use std::fs;
 
     #[test]
     fn part_1() {
-        let filepath = "./day-1.test";
+        let filepath = "./day-2.test";
         let test_input = "forward 5\ndown 5\nforward 8\nup 3\ndown 8\nforward 2";
         assert!(fs::write(filepath, test_input).is_ok());
         assert_eq!(super::part_1(filepath), 150);
@@ -46,7 +45,7 @@ mod tests {
 
     #[test]
     fn part_2() {
-        let filepath = "./day-1.test";
+        let filepath = "./day-2.test";
         let test_input = "forward 5\ndown 5\nforward 8\nup 3\ndown 8\nforward 2";
         assert!(fs::write(filepath, test_input).is_ok());
         assert_eq!(super::part_2(filepath), 900);
